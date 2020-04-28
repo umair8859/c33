@@ -81,6 +81,7 @@ function draw(){
 }
 
 function mouseDragged(){
+    bird.trajectory=[];
     //if (gameState!=="launched"){
         Matter.Body.setPosition(bird.body, {x: mouseX , y: mouseY});
     //}
@@ -95,6 +96,7 @@ function mouseReleased(){
 function keyPressed(){
     if(keyCode === 32){
        slingshot.attach(bird.body);
+       bird.trajectory=[];
     }
 }
 
